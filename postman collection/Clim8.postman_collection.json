@@ -1,0 +1,82 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Clim8",
+		"_postman_id": "8cdcf248-8e43-db90-f3dd-9d346d6fbcee",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Questionnaire",
+			"request": {
+				"url": "http://localhost:8080/questionnaire-api/questionnaire",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Answer Return NOT_COMPLETE",
+			"request": {
+				"url": "http://localhost:8080/questionnaire-api/submit/answers",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"question\": \"q1\",\n        \"answer\": \"a1\"\n    },\n    {\n        \"question\": \"q2\",\n        \"answer\": \"a2\"\n    },\n    {\n        \"question\": \"q3\",\n        \"answer\": \"a1\"\n    }\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Answer Return SUITABLE",
+			"request": {
+				"url": "http://localhost:8080/questionnaire-api/submit/answers",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"question\": \"q1\",\n        \"answer\": \"a1\"\n    },\n    {\n        \"question\": \"q2\",\n        \"answer\": \"a2\"\n    },\n    {\n        \"question\": \"q3\",\n        \"answer\": \"a1\"\n    },\n    {\n        \"question\": \"q4\",\n        \"answer\": \"a1\"\n    }\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Answer Return NOT_SUITABLE",
+			"request": {
+				"url": "http://localhost:8080/questionnaire-api/submit/answers",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"question\": \"q1\",\n        \"answer\": \"a1\"\n    },\n    {\n        \"question\": \"q2\",\n        \"answer\": \"a1\"\n    },\n    {\n        \"question\": \"q3\",\n        \"answer\": \"a1\"\n    },\n    {\n        \"question\": \"q4\",\n        \"answer\": \"a1\"\n    }\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
